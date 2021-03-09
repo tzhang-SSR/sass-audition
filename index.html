@@ -1,37 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Front End Audition</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dist/audition.css" />
+    <meta name="theme-color" content="#fafafa" />
+    <style>
+      .desktop {
+        display: none;
+      }
+      .linkbtn {
+        width: 150px;
+        text-align: center;
+      }
+      .mobile {
+        display: block;
+        text-align: center;
+      }
+      .mobile a {
+        min-width: 150px;
+        margin: 0 10px;
+        padding: 10px;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <title>Front End Audition</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+      @media only screen and (min-width: 1200px) {
+        .desktop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px;
+        }
+        .mobile {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .mobile a {
+          width: 90%;
+          margin: 5px auto;
+        }
+      }
+    </style>
+  </head>
 
-  <link rel="stylesheet" href="dist/audition.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-  <!-- Add your site or application content here -->
-  <div class="container">
-
-    <div class="row">
-      <div class="col">
-        <section>
-          <div>
-            <p>Great! Your registry is published and ready to be shared.</p>
-            <a href="/">Share</a>
-            <a href="/">Preview</a>
-            <a href="/">Edit</a>
-          </div>
-        </section>
+  <body>
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <section>
+            <div class="desktop">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#FF9D64"
+                  class="bi bi-exclamation-square-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+                <p>
+                  <strong>You're almost there!</strong> Add payment settings and
+                  you're ready to share.
+                </p>
+              <a href="/" class="btn btn-primary linkbtn">Add Payment</a>
+              <a href="/" class="btn btn-outline-primary linkbtn">Preview</a>
+              <a href="/" class="btn btn-outline-primary linkbtn">Edit</a>
+            </div>
+          </section>
+          <section>
+            <div class="mobile">
+              <p>
+                <strong>Great!</strong> Your registry is published and ready to
+                be shared.
+              </p>
+              <div>
+                <a href="/" class="btn btn-primary">Share</a>
+                <a href="/" class="btn btn-outline-primary">Preview</a>
+                <a href="/" class="btn btn-outline-primary">Edit</a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-
-  </div>
-
-</body>
-
+  </body>
 </html>
